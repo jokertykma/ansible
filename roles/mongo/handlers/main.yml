@@ -1,0 +1,8 @@
+---
+#file: /roles/mongo/handers/main.yml
+
+
+- name: restart mongod
+  service: name=mongod state=restarted
+  listen: "restart web services"
+

@@ -1,0 +1,15 @@
+---
+
+
+- hosts: "{{ host }}"
+  gather_facts: no
+  remote_user: ubuntusv
+  become: true
+  become_method: sudo
+  become_user: ubuntusv
+  become_flags: '-s /bin/sh'
+  vars_files:
+    - "group_vars/{{ env }}"
+  roles:
+    - common
+    - mongo
