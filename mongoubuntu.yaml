@@ -11,5 +11,4 @@
   vars_files:
     - "group_vars/{{ env }}"
   roles:
-    - common
     - mongo
